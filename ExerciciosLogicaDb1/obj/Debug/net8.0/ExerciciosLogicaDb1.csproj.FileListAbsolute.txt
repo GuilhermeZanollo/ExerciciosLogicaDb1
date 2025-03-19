@@ -1,0 +1,14 @@
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\bin\Debug\net8.0\ExerciciosLogicaDb1.exe
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\bin\Debug\net8.0\ExerciciosLogicaDb1.deps.json
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\bin\Debug\net8.0\ExerciciosLogicaDb1.runtimeconfig.json
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\bin\Debug\net8.0\ExerciciosLogicaDb1.dll
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\bin\Debug\net8.0\ExerciciosLogicaDb1.pdb
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.AssemblyInfoInputs.cache
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.AssemblyInfo.cs
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.csproj.CoreCompileInputs.cache
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.dll
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\refint\ExerciciosLogicaDb1.dll
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.pdb
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.genruntimeconfig.cache
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ref\ExerciciosLogicaDb1.dll
