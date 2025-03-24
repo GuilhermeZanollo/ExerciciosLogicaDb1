@@ -12,3 +12,4 @@ C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug
 C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.pdb
 C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.genruntimeconfig.cache
 C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ref\ExerciciosLogicaDb1.dll
+C:\Projetos\AvaliacaoLogicaDb1\ExerciciosLogicaDb1\ExerciciosLogicaDb1\obj\Debug\net8.0\ExerciciosLogicaDb1.sourcelink.json

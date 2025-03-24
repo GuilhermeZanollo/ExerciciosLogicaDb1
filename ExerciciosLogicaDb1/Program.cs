@@ -20,7 +20,6 @@ namespace ExerciciosLogicaDb1
             # Exercício 1: Calculadora Simples
             Crie um programa que receba dois números e uma operação (+, -, *, /) e retorne o resultado.
             Trate possíveis erros como divisão por zero.
-            
 
             Console.WriteLine("Informe qual operação você quer utilizar: +, -, * ou /");
             string operacao = Console.ReadLine();
@@ -75,24 +74,29 @@ namespace ExerciciosLogicaDb1
             */
 
             /*
-            ## Exercício 3: Fibonacci -> REVER COM CALMA
+            ## Exercício 3: Fibonacci
             A sequência de Fibonacci é uma famosa sequência matemática onde cada número é a soma dos dois números anteriores. A sequência começa 
             com 0 e 1, e os próximos termos são calculados somando os dois valores anteriores.
             Se o usuário digitar 8, o programa vai exibir: 0 1 1 2 3 5 8 13
             Implemente um programa que gere os N primeiros números da sequência de Fibonacci.
-            
+            */
+
+            /*
+            Console.Write("Digite um número para a sequência de Fibonacci: ");
+            int n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Sequência de Fibonacci até o {n}-ésimo termo:");
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(Fibonacci(i) + " ");
+            }
 
             static int Fibonacci(int n)
             {
-                if (n == 0) return 0;
-                if (n == 1) return 1;
-                return Fibonacci(n - 1) + Fibonacci(n - 2);
+                if (n == 0) return 0; // Caso base 1: Fibonacci(0) = 0
+                if (n == 1) return 1; // Caso base 2: Fibonacci(1) = 1
+                return Fibonacci(n - 1) + Fibonacci(n - 2); // Chamada recursiva
             }
-
-            Console.Write("Informe um número: ");
-            int numero = int.Parse(Console.ReadLine());
-
-            Console.Write("A sequência de Fibonacci é: ");
             */
 
             /*
@@ -104,10 +108,10 @@ namespace ExerciciosLogicaDb1
             Em cada passagem, compara elementos adjacentes (um par de cada vez)
             Se um elemento for maior que o próximo, eles são trocados de posição
             Esse processo continua até que não sejam necessárias mais trocas
- 
+
             Exemplo de execução:
             Se o usuário criar um array [5, 3, 8, 1, 2]:
- 
+
             Compara 5 e 3 → troca → [3, 5, 8, 1, 2]
             Compara 5 e 8 → não troca → [3, 5, 8, 1, 2]
             Compara 8 e 1 → troca → [3, 5, 1, 8, 2]
@@ -139,13 +143,15 @@ namespace ExerciciosLogicaDb1
             ## Exercício 5: Palíndromo
             Crie um programa que verifique se uma palavra ou frase é um palíndromo (lê-se igual de trás para frente).
             Utilize como exemplo a palavra RADAR
+            */
 
+            /*
             Console.WriteLine("Informe uma palavra: ");
             string palavra = Console.ReadLine().ToLower();
 
-            char[] charArray = palavra.ToCharArray(); // Transforma a variável palavra de char para array
-            Array.Reverse(charArray); // Inverte a ordem da variável charArray
-            string palavraInvertida = new string(charArray); // Instância charArray e o transforma em uma string, depois atribui a string palavraInvertida
+            char[] charArray = palavra.ToCharArray();
+            Array.Reverse(charArray); 
+            string palavraInvertida = new string(charArray);
 
             if (palavra ==  palavraInvertida)
             {
@@ -160,7 +166,9 @@ namespace ExerciciosLogicaDb1
             /*
             ## Exercício 6: Contagem de Vogais e Consoantes
             Crie um programa que conte o número de vogais e consoantes em uma string.
-            
+            */
+
+            /*
             Console.Write("Informe uma palavra: ");
             string palavra = Console.ReadLine().ToLower();
 
@@ -263,11 +271,69 @@ namespace ExerciciosLogicaDb1
             ## Exercício 8: Jogo de Adivinhação
             Crie um jogo onde o computador escolhe um número aleatório entre 0 e 10 e o jogador deve adivinhar, depois mostre a quantidade de tentativas 
             utilizadas pelo usuário até conseguir adivinhar.
+
+            List<int> list = new List<int>();
+            int tentativas = 0;
+
+            while (true)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Tente adivinhar um número entre 0 e 10: ");
+                int tentativa = int.Parse(Console.ReadLine());
+
+                tentativas++;
+
+                switch (tentativa)
+                {
+                    case 0:
+                        list.Add(0);
+                        Console.WriteLine("Tente novamente!" + "Tentativas: " + tentativas);
+                        break;
+                    case 1:
+                        list.Add(1);
+                        Console.WriteLine("Você acertou!" + "Tentativas: " + tentativas);
+                        break;
+                    case 2: 
+                        list.Add(2);
+                        Console.WriteLine("Tente novamente!" + "Tentativas: " + tentativas);
+                        break;
+                    case 3:
+                        list.Add(3);
+                        Console.WriteLine("Tente novamente!" + "Tentativas: " + tentativas);
+                        break;
+                    case 4:
+                        list.Add(4);
+                        Console.WriteLine("Tente novamente!" + "Tentativas: " + tentativas);
+                        break;
+                    case 5:
+                        list.Add(5);
+                        Console.WriteLine("Tente novamente!" + "Tentativas: " + tentativas);
+                        break;
+                    case 6:
+                        list.Add(6);
+                        Console.WriteLine("Você acertou!" + "Tentativas: " + tentativas);
+                        break;
+                    case 7:
+                        list.Add(7);
+                        Console.WriteLine("Tente novamente!" + "Tentativas: " + tentativas);
+                        break;
+                    case 8:
+                        list.Add(8);
+                        Console.WriteLine("Tente novamente!" + "Tentativas: " + tentativas);
+                        break;
+                    case 9:
+                        list.Add(9);
+                        Console.WriteLine("Tente novamente!" + "Tentativas: " + tentativas);
+                        break;
+                    case 10: list.Add(10);
+                        Console.WriteLine("Tente novamente" + "Tentativas: " + tentativas);
+                        break;
+                    default:
+                        Console.WriteLine("Digite um número entre 0 e 10: ");
+                        break;
+                }
+            }
             */
-
-            //Console.WriteLine("Escolha um número aleatório entre 0 e 10")
-
-
 
             /*
             ## Exercício 9: Gerenciador de Lista de Tarefas
@@ -344,7 +410,7 @@ namespace ExerciciosLogicaDb1
             IMC = 70 / (1,75 × 1,75)
             IMC = 70 / 3,0625
             IMC = 22,86
-            
+
 
             Console.WriteLine("Informe seu peso: ");
             double peso = double.Parse(Console.ReadLine());
@@ -356,6 +422,8 @@ namespace ExerciciosLogicaDb1
 
             Console.WriteLine("O seu IMC é: " + IMC.ToString("F2", CultureInfo.InvariantCulture));
             */
+
         }
     }
 }
+
