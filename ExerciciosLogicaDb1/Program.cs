@@ -61,16 +61,30 @@ namespace ExerciciosLogicaDb1
             Um número primo é um número natural maior que 1 que só pode ser dividido por 1 e por ele mesmo sem deixar resto. Por exemplo, 2, 3, 5, 7, 11, 13, 17, 19, 23, etc.
             
 
-            Console.WriteLine("Informe o número para verificar se é um número primo: ");
+            Console.Write("Digite um número: ");
             int numero = int.Parse(Console.ReadLine());
 
-            if (numero %2  == 0 && numero < 0 || numero > 0)
+            if (numero < 2)
             {
-                Console.WriteLine("O número é primo");
-            } else
-            {
-                Console.WriteLine("O número não é primo");
+                Console.WriteLine($"{numero} não é um número primo.");
+                return;
             }
+
+            bool primo = true;
+
+            for (int i = 2; i < numero; i++)
+            {
+                if (numero % i == 0)
+                {
+                    primo = false;
+                    break;
+                }
+            }
+
+            if (primo)
+                Console.WriteLine($"{numero} é um número primo.");
+            else
+                Console.WriteLine($"{numero} não é um número primo.");
             */
 
             /*
@@ -268,6 +282,67 @@ namespace ExerciciosLogicaDb1
             */
 
             /*
+            // Segunda alternativa:
+            while (true)
+            {
+                Console.WriteLine("Informe qual temperatura será convertida: ");
+                double temperaturaConvertida = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Informe qual temperatura para conversão: ");
+                double temperaturaConversao = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Escolha a operação de conversão: ");
+                Console.WriteLine("1 - Celsius para Fahrenheit");
+                Console.WriteLine("2 - Celsius para Kelvin");
+                Console.WriteLine("3 - Fahrenheit para Celsius");
+                Console.WriteLine("4 - Fahrenheit para Kelvin");
+                Console.WriteLine("5 - Kelvin para Celsius");
+                Console.WriteLine("6 - Kelvin para Fahrenheit");
+
+                if (!int.TryParse(Console.ReadLine(), out int opcao))
+                {
+                    Console.WriteLine("Opção inválida");
+                    continue;
+                }
+
+                double resultado;
+
+                switch (opcao)
+                {
+                    case 1:
+                        resultado = temperaturaConvertida * (9.0 / 5.0) + 32;
+                        break;
+
+                    case 2:
+                        resultado = temperaturaConvertida + 273.15;
+                        break;
+
+                    case 3:
+                        resultado = (temperaturaConvertida - 32) * (5.0 / 9.0);
+                        break;
+
+                    case 4:
+                        resultado = (temperaturaConvertida - 32) * (5.0 / 9.0) + 273.15;
+                        break;
+
+                    case 5:
+                        resultado = temperaturaConvertida - 273.15;
+                        break;
+
+                    case 6:
+                        resultado = (temperaturaConvertida - 273.15) * (9.0 / 5.0) + 32;
+                        break;
+
+                    default:
+                        Console.WriteLine("Opção inválida");
+                        continue;
+                }
+
+                Console.WriteLine($"Resultado: {resultado:F2}");
+            }
+            */
+
+            /*
             ## Exercício 8: Jogo de Adivinhação
             Crie um jogo onde o computador escolhe um número aleatório entre 0 e 10 e o jogador deve adivinhar, depois mostre a quantidade de tentativas 
             utilizadas pelo usuário até conseguir adivinhar.
@@ -336,6 +411,34 @@ namespace ExerciciosLogicaDb1
             */
 
             /*
+            // Segunda opção: 
+            
+            Random random = new Random();
+            int numeroCorreto = random.Next(0, 11);
+            int contador = 0;
+
+            while (true)
+            {
+                Console.WriteLine("Escolha um número entre 0 e 10: ");
+
+                if (!int.TryParse(Console.ReadLine(), out int numero) || numero < 0 || numero > 10) {
+                    Console.WriteLine("Número inválido, escolha um número entre 0 e 10");
+                }
+
+                contador++;
+
+                if (numero == numeroCorreto)
+                {
+                    Console.WriteLine("Parabéns, você acertou!");
+                    break;
+                } else
+                {
+                    Console.WriteLine("Tente novamente!");
+                }
+            }
+            */
+
+            /*
             ## Exercício 9: Gerenciador de Lista de Tarefas
             Crie um programa que permita adicionar, listar e remover tarefas de uma lista.
 
@@ -399,6 +502,74 @@ namespace ExerciciosLogicaDb1
             */
 
             /*
+            // Segunda forma:
+
+
+            List<string> listaTarefas = new List<string>();
+
+            while (true)
+            {
+                Console.WriteLine("Escolha uma das opções: ");
+                Console.WriteLine("1 - Para adicionar tarefa");
+                Console.WriteLine("2 - Para listar tarefas");
+                Console.WriteLine("3 - Para remover tarefas");
+
+                if (!int.TryParse(Console.ReadLine(), out int opcao))
+                {
+                    Console.WriteLine("Opção inválida");
+                    continue;
+                }
+
+                switch (opcao)
+                {
+                    case 1:
+                        Console.WriteLine("Informe a tarefa que deseja adicionar na lista: ");
+                        string nomeTarefa = Console.ReadLine();
+                        listaTarefas.Add(nomeTarefa);
+                        Console.WriteLine("Tarefa adicionada com sucesso!");
+                        break;
+
+                    case 2:
+                        if (listaTarefas.Count > 0)
+                        {
+                            foreach (string tarefa in listaTarefas)
+                            {
+                                Console.WriteLine(tarefa);
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Lista está vazia");
+                        }
+                        break;
+
+                    case 3:
+                        if (listaTarefas.Count > 0)
+                        {
+                            Console.WriteLine("Informe o número da tarefa que deseja remover: ");
+                            int index = int.Parse(Console.ReadLine());
+                            if (index == listaTarefas.Count)
+                            {
+                                Console.WriteLine($"Tarefa '{listaTarefas[index - 1]}' removida");
+                                listaTarefas.RemoveAt(index - 1);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Essa tarefa não existe");
+                                continue;
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Lista está vazia");
+                        }
+                        break;
+
+                }
+            }
+            */
+
+            /*
             ## Exercício 10: Calculadora de IMC
             Crie um programa que calcule o Índice de Massa Corporal (IMC) e classifique o resultado.
             A fórmula do IMC é:
@@ -422,7 +593,6 @@ namespace ExerciciosLogicaDb1
 
             Console.WriteLine("O seu IMC é: " + IMC.ToString("F2", CultureInfo.InvariantCulture));
             */
-
         }
     }
 }
