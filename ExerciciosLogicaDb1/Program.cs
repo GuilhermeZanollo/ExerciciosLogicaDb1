@@ -131,26 +131,44 @@ namespace ExerciciosLogicaDb1
             Compara 8 e 1 → troca → [3, 5, 1, 8, 2]
             Compara 8 e 2 → troca → [3, 5, 1, 2, 8]
             Continua com novas passagens até ordenar completamente: [1, 2, 3, 5, 8]
+            */
 
-            int[] array = { 5, 3, 8, 1, 2 };
+            /*
+            int[] numeros = { 5, 3, 8, 4, 2 };
 
-            int n = array.Length;
+            Console.WriteLine("Array original: " + string.Join(", ", numeros));
+            BubbleSort(numeros);
+            Console.WriteLine("Array ordenado: " + string.Join(", ", numeros));
 
-            for (int i = 0; i < n - 1; i++)
+            static void BubbleSort(int[] array)
             {
-                // Laço para percorrer os elementos do array e comparar pares adjacentes
-                for (int j = 0; j < n - i - 1; j++)
+                int n = array.Length;
+                bool trocou;
+
+                for (int i = 0; i < n - 1; i++)
                 {
-                    // Comparando os elementos adjacentes
-                    if (array[j] > array[j + 1])
+                    trocou = false;
+                    for (int j = 0; j < n - i - 1; j++)
                     {
-                        // Trocando os elementos se o anterior for maior que o próximo
-                        int temp = array[j];
-                        array[j] = array[j + 1];
-                        array[j + 1] = temp;
+                        if (array[j] > array[j + 1])
+                        {
+                            // Troca os elementos
+                            (array[j], array[j + 1]) = (array[j + 1], array[j]);
+                            trocou = true;
+                        }
                     }
+                    if (!trocou) break; // Se não houve troca, a lista já está ordenada
                 }
             }
+            */
+
+            // Outra forma de resolver sem usar bubble sort:
+            /*
+            int[] numeros = { 5, 3, 8, 4, 2 };
+
+            Array.Sort(numeros);
+
+            Console.WriteLine("Array ordenado: " + string.Join(", ", numeros));
             */
 
             /*
